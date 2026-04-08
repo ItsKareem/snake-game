@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfgpxk6s2yn6r"]
+
+[ext_resource type="Script" uid="uid://bu4ajirf14npt" path="res://main_game.gd" id="1_ykeeq"]
+[ext_resource type="Texture2D" uid="uid://d3h3qu6da2ag8" path="res://snake-tileset.png" id="2_6bm6p"]
+[ext_resource type="Texture2D" uid="uid://bkv7yg10nlf5o" path="res://apple-sheet.png" id="3_dugkq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2pltu"]
+texture = ExtResource("2_6bm6p")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f52ns"]
+texture = ExtResource("3_dugkq")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_l5ukw"]
+sources/0 = SubResource("TileSetAtlasSource_2pltu")
+sources/1 = SubResource("TileSetAtlasSource_f52ns")
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_ykeeq")
+
+[node name="Snake" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_l5ukw")
+format = 2
